@@ -8,22 +8,22 @@ Develop your parse powered webapps locally
 Install globally for availabilty system wide
 
 #####With npm
-	
+
 	npm install parse-develop -g
 
 #####From source:
 
 clone the repo in your favorite place:
 
-	git clone git://github.com/flovilmart/parse-develop.git
+	git clone git://github.com/lsn-sokna/parse-develop.git
 	cd parse-develop
 	npm install -g
-	
+
 That will install the local parse environment wrapper in the parse-develop directory
 
 ##Prepare your project:
 
-in you config/global.json
+in you .parse.local
 
 add your javascriptKey:
 
@@ -34,16 +34,16 @@ add your javascriptKey:
 				"masterKey" : "MY_MASTER_KEY",
 				"javascriptKey": "SET YOUR JS KEY HERE!"
 			}
-		} 
+		}
 	}
 
 and you're done!
 
 
 ###Limitations:
-As you know, Parse provide hooks (beforeSave, afterSave, beforeDelete, afterDelete) and define functions. 
+As you know, Parse provide hooks (beforeSave, afterSave, beforeDelete, afterDelete) and define functions.
 
-Those functions have to be uploaded to the Parse servers using `parse deploy` or `parse develop`. 
+Those functions have to be uploaded to the Parse servers using `parse deploy` or `parse develop`.
 
 Updating those functions locally without publishing your code to parse have no effect!
 
@@ -51,15 +51,15 @@ Updating those functions locally without publishing your code to parse have no e
 
 ##How to use
 
-From your parse cloud app folder, 
+From your parse cloud app folder,
 instead of running `parse develop [app name]`, your can now run `parse-develop [app name]` or `parsedev [app name]`
 
 app name is optional
 
 Happy parsing!
 
-##Supported parse-provided cloud modules 
- 
+##Supported parse-provided cloud modules
+
 - applinks
 - mailgun
 - mandrill
@@ -104,12 +104,16 @@ The default options for are:
     	watch:true,
     	minUptime: 1000,
     	spinSleepTime: 500,
-    	
+
     	// expressjs port
     	port: 3000
   	}
 
 ##Change Log
+
+#####0.0.51
+
+Support new structure with parse cli 2.2.7
 
 #####0.0.50
 Adds support for all Parse Cloud modules provided by parse
@@ -224,3 +228,6 @@ Ability to install system wide
 
 Proof of concept
 
+##Noted
+
+Original source : https://github.com/flovilmart/parse-develop
